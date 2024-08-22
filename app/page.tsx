@@ -1,8 +1,5 @@
-import { Button } from "./_components/ui/button";
-
+import { Button } from "./_components/ui/button"
 
 export default function Home() {
-  return (
-    <Button>Tetando botao</Button>
-  );
+  return <Button>Tetando botao</Button>
 }

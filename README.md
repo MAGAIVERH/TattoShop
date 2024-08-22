@@ -2,8 +2,8 @@
 # AULA ZERO
 - [x]Setup do banco
 - [x]seeding do banco (colocar dados)
-- [] introducao ao next
-- [] tailwind e shadcn 
+- [x] introducao ao next
+- [x] tailwind e shadcn 
 - [] git hooks
 
 

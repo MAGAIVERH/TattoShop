@@ -8,9 +8,27 @@ import { Badge } from "./_components/ui/badge"
 import { Avatar, AvatarImage } from "./_components/ui/avatar"
 import { db } from "./_lib/prisma"
 import TattoshopItem from "./_components/tattoshop-item"
+import Footer from "./_components/footet"
+import {
+  Gem,
+  PenTool,
+  Feather,
+  Brush,
+  Edit3,
+  RefreshCw,
+  Palette,
+  Eye,
+  Circle,
+  Anchor,
+} from "lucide-react"
 
 const Home = async () => {
   const tattoshops = await db.tattoshop.findMany({})
+  const popularTattoshops = await db.tattoshop.findMany({
+    orderBy: {
+      name: "desc",
+    },
+  })
   console.log(tattoshops)
 
   return (
@@ -25,6 +43,58 @@ const Home = async () => {
           <Input placeholder="Faça sua Busca..." />
           <Button>
             <SearchIcon />
+          </Button>
+        </div>
+
+        <div className="mt-4 flex gap-3 overflow-scroll [&::-webkit-scrollbar]:hidden">
+          <Button className="gap-2" variant="secondary">
+            <Gem />
+            <p className="">Small Tatto</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <PenTool />
+            <p className="">Medio Tatto</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Feather />
+            <p className="">Big Tatto</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Brush />
+            <p className="">Cover up Tatto</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Edit3 />
+            <p className="">Custom tattoo</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <RefreshCw />
+            <p className="">Tattoo Retouching</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Palette />
+            <p className="">Colorful Tattoo</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Eye />
+            <p className="">Realistic Tattoo</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Circle /> {/* Desenho Personalizado */}
+            <p className="">Minimalist Tattoo</p>
+          </Button>
+
+          <Button className="gap-2" variant="secondary">
+            <Anchor /> {/* Desenho Personalizado */}
+            <p className="">Traditional Tattoo</p>
           </Button>
         </div>
 
@@ -75,7 +145,19 @@ const Home = async () => {
             <TattoshopItem key={tattoshop.id} tattoshop={tattoshop} />
           ))}
         </div>
+
+        <h2 className="mb-3 mt-4 text-xs font-bold uppercase text-gray-400">
+          Popular
+        </h2>
+
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {popularTattoshops.map((tattoshop) => (
+            <TattoshopItem key={tattoshop.id} tattoshop={tattoshop} />
+          ))}
+        </div>
       </div>
+
+      <Footer />
     </>
   )
 }

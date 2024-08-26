@@ -10,6 +10,12 @@ import QuickSearch from "./_components/quickSearch"
 import BookingItem from "./_components/booking-item"
 
 const Home = async () => {
+  const services = await db.tattoservice.findMany({
+    orderBy: {
+      name: "asc",
+    },
+    distinct: ["name"],
+  })
   const tattoshops = await db.tattoshop.findMany({})
   const popularTattoshops = await db.tattoshop.findMany({
     orderBy: {
@@ -32,7 +38,7 @@ const Home = async () => {
           </Button>
         </div>
 
-        <QuickSearch />
+        <QuickSearch services={services} />
 
         <div className="relative mt-4 aspect-[21/9] w-full sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px]">
           <Image

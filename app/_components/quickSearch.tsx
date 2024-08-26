@@ -9,61 +9,59 @@ import {
   Eye,
   Circle,
   Anchor,
+  LucideIcon,
 } from "lucide-react"
 import { Button } from "./ui/button"
+import { Tattoservice } from "@prisma/client"
 
-const QuickSearch = () => {
+const iconMap: { [key: string]: LucideIcon } = {
+  pequena: Gem,
+  média: PenTool,
+  grande: Feather,
+  "cover-up": Brush,
+  personalizada: Edit3,
+  retoque: RefreshCw,
+  colorida: Palette,
+  realista: Eye,
+  minimalista: Circle,
+  tradicional: Anchor,
+}
+
+interface QuickSearchProps {
+  services: Tattoservice[]
+}
+
+const QuickSearch = ({ services }: QuickSearchProps) => {
+  console.log(
+    "Serviços recebidos:",
+    services.map((s) => s.name),
+  )
+
+  const getIcon = (serviceName: string): LucideIcon => {
+    const lowercaseName = serviceName.toLowerCase()
+    for (const [key, icon] of Object.entries(iconMap)) {
+      if (lowercaseName.includes(key)) {
+        return icon
+      }
+    }
+    return Gem // Ícone padrão se nenhuma correspondência for encontrada
+  }
+
   return (
-    <div className="mt-4 flex gap-3 overflow-scroll [&::-webkit-scrollbar]:hidden">
-      <Button className="gap-2" variant="secondary">
-        <Gem />
-        <p className="">Small Tatto</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <PenTool />
-        <p className="">Medio Tatto</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Feather />
-        <p className="">Big Tatto</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Brush />
-        <p className="">Cover up Tatto</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Edit3 />
-        <p className="">Custom tattoo</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <RefreshCw />
-        <p className="">Tattoo Retouching</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Palette />
-        <p className="">Colorful Tattoo</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Eye />
-        <p className="">Realistic Tattoo</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Circle />
-        <p className="">Minimalist Tattoo</p>
-      </Button>
-
-      <Button className="gap-2" variant="secondary">
-        <Anchor />
-        <p className="">Traditional Tattoo</p>
-      </Button>
+    <div className="mt-4 flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+      {services.map((service) => {
+        const Icon = getIcon(service.name)
+        return (
+          <Button
+            key={service.id}
+            variant="secondary"
+            className="flex items-center"
+          >
+            <Icon className="mr-2 h-4 w-4" />
+            <span className="text-sm">{service.name}</span>
+          </Button>
+        )
+      })}
     </div>
   )
 }

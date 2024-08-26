@@ -5,7 +5,7 @@ import { Input } from "./_components/ui/input"
 import Image from "next/image"
 import { db } from "./_lib/prisma"
 import TattoshopItem from "./_components/tattoshop-item"
-import Footer from "./_components/footet"
+
 import QuickSearch from "./_components/quickSearch"
 import BookingItem from "./_components/booking-item"
 
@@ -67,8 +67,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </>
   )
 }

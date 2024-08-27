@@ -17,7 +17,7 @@ const BookingItem = () => {
             <h3 className="font-semibold">Simple tattoo</h3>
 
             <div className="flex items-center gap-2">
-              <Avatar className="h-6 w-6">
+              <Avatar className="h-10 w-10">
                 <AvatarImage src="https://images.unsplash.com/photo-1654338774369-79e915e94ed1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXN0JUMzJUJBZGlvJTIwdGF0dWFnZW18ZW58MHx8MHx8fDA%3D" />
               </Avatar>
 

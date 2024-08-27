@@ -32,10 +32,10 @@ interface QuickSearchProps {
 }
 
 const QuickSearch = ({ services }: QuickSearchProps) => {
-  console.log(
-    "Serviços recebidos:",
-    services.map((s) => s.name),
-  )
+  // console.log(
+  //   "Serviços recebidos:",
+  //   services.map((s) => s.name),
+  // )
 
   const getIcon = (serviceName: string): LucideIcon => {
     const lowercaseName = serviceName.toLowerCase()

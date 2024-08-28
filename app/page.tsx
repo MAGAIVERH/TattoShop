@@ -1,13 +1,10 @@
-import { SearchIcon } from "lucide-react"
 import Header from "./_components/hearder"
-import { Button } from "./_components/ui/button"
-import { Input } from "./_components/ui/input"
 import Image from "next/image"
 import { db } from "./_lib/prisma"
 import TattoshopItem from "./_components/tattoshop-item"
-
 import QuickSearch from "./_components/quickSearch"
 import BookingItem from "./_components/booking-item"
+import Search from "./_components/search"
 
 const Home = async () => {
   const services = await db.tattoservice.findMany({
@@ -25,19 +22,20 @@ const Home = async () => {
 
   return (
     <>
+      {/* Header*/}
       <Header />
 
       <div className="p-5">
+        {/* Text */}
         <h2 className="text-xl font-bold">Hello, Magaiver!</h2>
         <p>Friday, 22 August</p>
 
-        <div className="mt-6 flex items-center gap-2">
-          <Input placeholder="Faça sua Busca..." />
-          <Button>
-            <SearchIcon />
-          </Button>
+        {/* Search */}
+        <div className="mt-6">
+          <Search />
         </div>
 
+        {/*   q Quickly Search*/}
         <QuickSearch services={services} />
 
         <div className="relative mt-4 aspect-[21/9] w-full sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px]">

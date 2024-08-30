@@ -13,6 +13,7 @@ import {
 } from "lucide-react"
 import { Button } from "./ui/button"
 import { Tattoservice } from "@prisma/client"
+import Link from "next/link"
 
 const iconMap: { [key: string]: LucideIcon } = {
   pequena: Gem,
@@ -56,9 +57,12 @@ const QuickSearch = ({ services }: QuickSearchProps) => {
             key={service.id}
             variant="secondary"
             className="flex items-center"
+            asChild
           >
-            <Icon className="mr-2 h-4 w-4" />
-            <span className="text-sm">{service.name}</span>
+            <Link href={`/tattoshops?service=${service.name}`}>
+              <Icon className="mr-2 h-4 w-4" />
+              <span className="text-sm">{service.name}</span>
+            </Link>
           </Button>
         )
       })}

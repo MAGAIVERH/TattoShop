@@ -35,7 +35,7 @@ const Home = async () => {
           <Search />
         </div>
 
-        {/*   q Quickly Search*/}
+        {/* Quickly Search*/}
         <QuickSearch services={services} />
 
         <div className="relative mt-4 aspect-[21/9] w-full sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px]">

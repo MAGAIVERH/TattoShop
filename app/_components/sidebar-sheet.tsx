@@ -101,14 +101,14 @@ const SidebarSheet = () => {
 
       <div className="flex flex-col gap-2 border-b border-solid py-5">
         {serviceOptions.map((option) => (
-          <Button
-            className="justify-start gap-2"
-            variant="ghost"
-            key={option.title}
-          >
-            <option.icon className="h-4 w-4" />
-            <p>{option.title}</p>
-          </Button>
+          <SheetClose key={option.title} asChild>
+            <Button className="justify-start gap-2" variant="ghost" asChild>
+              <Link href={`/tattoshops?service=${option.title}`}>
+                <option.icon className="h-4 w-4" />
+                <p>{option.title}</p>
+              </Link>
+            </Button>
+          </SheetClose>
         ))}
       </div>
 

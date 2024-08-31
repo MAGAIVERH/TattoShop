@@ -89,7 +89,7 @@ model Tattobooking {
   user      User         @relation(fields: [userId], references: [id])
   serviceId String
   service   Tattoservice @relation(fields: [serviceId], references: [id])
-  date      String
+  date      DateTime
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
 }

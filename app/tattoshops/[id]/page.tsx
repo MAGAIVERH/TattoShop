@@ -95,7 +95,11 @@ const TattoShopsPage = async ({ params }: TattoshopsPageProps) => {
           </h2>
           <div className="space-y-3">
             {tattoshop.services.map((service) => (
-              <ServiceItem key={service.id} service={service} />
+              <ServiceItem
+                key={service.id}
+                tattoshop={tattoshop}
+                service={service}
+              />
             ))}
           </div>
         </div>

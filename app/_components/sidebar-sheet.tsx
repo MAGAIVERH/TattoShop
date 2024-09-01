@@ -5,24 +5,14 @@ import { Button } from "./ui/button"
 import { SheetClose, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet"
 import Link from "next/link"
 import { serviceOptions } from "../_contants/quickSearch"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog"
+import { Dialog, DialogContent } from "./ui/dialog"
 import { DialogTrigger } from "@radix-ui/react-dialog"
-import Image from "next/image"
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signOut, useSession } from "next-auth/react"
 import { Avatar, AvatarImage } from "./ui/avatar"
+import SignInDialog from "./sign-in-dialog"
 
 const SidebarSheet = () => {
   const { data } = useSession()
-
-  const handleLoginWithGoogleClick = async () => {
-    await signIn("google")
-  }
 
   const handleLogoutGoogleClick = async () => {
     await signOut()
@@ -58,26 +48,7 @@ const SidebarSheet = () => {
               </DialogTrigger>
 
               <DialogContent className="w-[90%]">
-                <DialogHeader>
-                  <DialogTitle>Log in to the platform!</DialogTitle>
-                  <DialogDescription>
-                    Connect using your Google account
-                  </DialogDescription>
-                </DialogHeader>
-
-                <Button
-                  variant="outline"
-                  className="gap-1 font-bold"
-                  onClick={handleLoginWithGoogleClick}
-                >
-                  <Image
-                    src="/Google.svg"
-                    alt="Log in with Google"
-                    width={18}
-                    height={18}
-                  />
-                  Google
-                </Button>
+                <SignInDialog />
               </DialogContent>
             </Dialog>
           </>

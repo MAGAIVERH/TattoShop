@@ -132,7 +132,6 @@ const ServiceItem = ({ service, tattoshop }: ServiceItemProps) => {
 
       await CreateBooking({
         serviceId: service.id,
-        userId: (data?.user as any).id,
         date: newDate,
       })
       handleBookingSheetOnChange()

@@ -19,4 +19,5 @@ export const CreateBooking = async (params: CreateBookingParams) => {
     data: { ...params, userId: (user.user as any).id },
   })
   revalidatePath("/tattoshops/[id]")
+  revalidatePath("/bookings")
 }

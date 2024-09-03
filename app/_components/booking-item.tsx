@@ -70,8 +70,8 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
   return (
     <Sheet open={isSheetOpen} onOpenChange={handleSheetOpenChange}>
-      <SheetTrigger className="w-full">
-        <Card className="min-w-[80%]">
+      <SheetTrigger className="w-full min-w-[90%]">
+        <Card className="min-w-[90%]">
           <CardContent className="flex justify-between p-0">
             <div className="flex flex-col gap-2 py-5 pl-5">
               <Badge
@@ -92,7 +92,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
             </div>
 
             <div className="flex flex-col items-center justify-center border-l-2 border-solid px-5">
-              <p className="truncate text-sm capitalize">
+              <p className="text-sm capitalize">
                 {format(booking.date, "MMMM", { locale: enUS })}
               </p>
               <p className="text-2xl">

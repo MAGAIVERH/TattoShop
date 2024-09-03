@@ -7,6 +7,8 @@ import BookingItem from "./_components/booking-item"
 import Search from "./_components/search"
 import { getServerSession } from "next-auth"
 import { authOptions } from "./_lib/auth"
+import { format } from "date-fns"
+import { enUS } from "date-fns/locale"
 
 const Home = async () => {
   const session = await getServerSession(authOptions)
@@ -51,8 +53,10 @@ const Home = async () => {
 
       <div className="p-5">
         {/* Text */}
-        <h2 className="text-xl font-bold">Hello, Magaiver!</h2>
-        <p>Friday, 22 August</p>
+        <h2 className="text-xl font-bold">
+          Hello, {session?.user ? session.user.name : "Welcome!"}
+        </h2>
+        {format(new Date(), "EEEE, MMMM d", { locale: enUS })}
 
         {/* Search */}
         <div className="mt-6">
@@ -75,7 +79,7 @@ const Home = async () => {
         </div>
 
         {/* Appointments */}
-        <h2 className="mb-3 mt-4 text-xs font-bold uppercase text-gray-400">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
           Appointments
         </h2>
 

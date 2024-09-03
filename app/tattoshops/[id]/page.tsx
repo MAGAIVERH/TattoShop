@@ -97,8 +97,8 @@ const TattoShopsPage = async ({ params }: TattoshopsPageProps) => {
             {tattoshop.services.map((service) => (
               <ServiceItem
                 key={service.id}
-                tattoshop={tattoshop}
-                service={service}
+                tattoshop={JSON.parse(JSON.stringify(tattoshop))}
+                service={JSON.parse(JSON.stringify(service))}
               />
             ))}
           </div>

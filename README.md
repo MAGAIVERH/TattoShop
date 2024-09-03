@@ -83,10 +83,8 @@ Make sure to configure the necessary environment variables in the `.env.local` f
 
 Contributions are always welcome! Please read the `CONTRIBUTING.md` file for details on our code of conduct and the process for submitting pull requests.
 
-📬 **Contact**
+📬 Contato
+Magaiver Magalhães - LinkedIn
+Link do Projeto: https://tatto-shop.vercel.app/
 
-Magaiver Magalhães - [LinkedIn](https://www.linkedin.com/in/magaiver-magalhaes-bb9572234/)
-
-Project Link: [https://tatto-shop.vercel.app/](https://tatto-shop.vercel.app/)
-
-Developed with ❤️ and ☕ by Magaiver Magalhães
+Desenvolvido com ❤️ e ☕ por Magaiver Magalhães

@@ -20,15 +20,15 @@ interface ServiceOption {
 export const serviceOptions: ServiceOption[] = [
   {
     icon: Gem,
-    title: "Pequena",
+    title: "Small",
   },
   {
     icon: PenTool,
-    title: "Média",
+    title: "Medium",
   },
   {
     icon: Feather,
-    title: "Grande",
+    title: "Large",
   },
   {
     icon: Brush,
@@ -36,26 +36,26 @@ export const serviceOptions: ServiceOption[] = [
   },
   {
     icon: Edit3,
-    title: "Personalizado",
+    title: "Custom Design",
   },
   {
     icon: RefreshCw,
-    title: "Retoque",
+    title: "Touch-up",
   },
   {
     icon: Palette,
-    title: "Colorida",
+    title: "Colorful",
   },
   {
     icon: Eye,
-    title: "Realista",
+    title: "Realistic",
   },
   {
     icon: Circle,
-    title: "Minimalista",
+    title: "Minimalist",
   },
   {
     icon: Anchor,
-    title: "Tradicional",
+    title: "Traditional",
   },
 ]

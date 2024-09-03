@@ -74,14 +74,19 @@ npx prisma migrate dev
 # Start the development server
 npm run dev
 
+```
 
 Make sure to configure the necessary environment variables in the .env.local file, including the Neon connection string, before starting the application.
+
+
 
 🤝 Contributing
 Contributions are always welcome! Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
 
+
+
 📬 Contact
-Magaiver Magalhães - LinkedIn
+LinkedIn - https://www.linkedin.com/in/magaiver-magalhaes-bb9572234/
 
 Project Link: https://tatto-shop.vercel.app/
 

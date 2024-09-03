@@ -1,8 +1,6 @@
 # Perfect Tatto
 
-<<<<<<< HEAD
-![Perfect Tatto](/public//telaInicial.png)
-=======
+![Perfect Tatto](/public/telaInicial.png)
 
 Perfect Tatto is an innovative platform that revolutionizes the connection between talented tattoo artists and clients seeking the perfect art for their skin. Developed with cutting-edge technologies, our application offers a smooth, intuitive, and visually appealing experience for finding, scheduling, and managing tattoo sessions.
 
@@ -77,14 +75,14 @@ npx prisma migrate dev
 npm run dev
 
 
-Make sure to configure the necessary environment variables in the `.env.local` file, including the Neon connection string, before starting the application.
+Make sure to configure the necessary environment variables in the .env.local file, including the Neon connection string, before starting the application.
 
-🤝 **Contributing**
+🤝 Contributing
+Contributions are always welcome! Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
 
-Contributions are always welcome! Please read the `CONTRIBUTING.md` file for details on our code of conduct and the process for submitting pull requests.
-
-📬 Contato
+📬 Contact
 Magaiver Magalhães - LinkedIn
-Link do Projeto: https://tatto-shop.vercel.app/
 
-Desenvolvido com ❤️ e ☕ por Magaiver Magalhães
+Project Link: https://tatto-shop.vercel.app/
+
+Developed with ❤️ and ☕ by Magaiver Magalhães

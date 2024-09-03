@@ -19,9 +19,9 @@ const SidebarSheet = () => {
   }
 
   return (
-    <SheetContent>
+    <SheetContent className="min-w-[90%]">
       <SheetHeader>
-        <SheetTitle className="text-left">Manu</SheetTitle>
+        <SheetTitle className="text-left">Menu</SheetTitle>
       </SheetHeader>
 
       <div className="flex items-center justify-between gap-3 border-b border-solid py-5">

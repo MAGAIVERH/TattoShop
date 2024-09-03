@@ -3,8 +3,6 @@
 <<<<<<< HEAD
 ![Perfect Tatto](/public//telaInicial.png)
 =======
-![Perfect Tatto](/telaInicial.png)
->>>>>>> 735c97ae47ee533361620484863a3c852332a3cd
 
 Perfect Tatto is an innovative platform that revolutionizes the connection between talented tattoo artists and clients seeking the perfect art for their skin. Developed with cutting-edge technologies, our application offers a smooth, intuitive, and visually appealing experience for finding, scheduling, and managing tattoo sessions.
 

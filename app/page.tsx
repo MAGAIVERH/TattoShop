@@ -9,6 +9,7 @@ import { getServerSession } from "next-auth"
 import { authOptions } from "./_lib/auth"
 import { format } from "date-fns"
 import { enUS } from "date-fns/locale"
+import AnnouncementBar from "./_components/announcementBar"
 
 const Home = async () => {
   const session = await getServerSession(authOptions)
@@ -48,6 +49,7 @@ const Home = async () => {
 
   return (
     <>
+      <AnnouncementBar />
       {/* Header*/}
       <Header />
 

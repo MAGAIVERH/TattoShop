@@ -36,7 +36,7 @@ export const serviceOptions: ServiceOption[] = [
   },
   {
     icon: Edit3,
-    title: "Custom Design",
+    title: "Design",
   },
   {
     icon: RefreshCw,
